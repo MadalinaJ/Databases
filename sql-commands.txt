@@ -18,7 +18,7 @@ CREATE Table name(
 
 	- it creates the table; it needs the name of the table, name of the columns and what datatype will be used.
 
-INSERT INTO tablename (column, column)
+INSERT INTO tableName (column, column)
 
 VALUES
 
@@ -29,19 +29,19 @@ VALUES
 	- adds data to the table; it needs the name of the table and columns; the values in the correct order.
 
 
-UPDATE tablename SET columnname = value-updated WHERE condition;
+UPDATE tableName SET columnName = valueUpdated WHERE condition;
 
 	- it updates an already existing value in the table depending on the condition.
 
-DELETE FROM tablename WHERE condition;
+DELETE FROM tableName WHERE condition;
 
 	- deletes a row in the table depending on the condition
 
-ALTER TABLE tablename ADD COLUMN columnname datatype / DROP COLUMN columnname;
+ALTER TABLE tableName ADD COLUMN columnName datatype / DROP COLUMN columnName;
 
 	-add or delete rows in the table
 
-DROP TABLE tablename; - deletes the entire table; 
+DROP TABLE tableName; - deletes the entire table; 
 
 
 3. What are some of the data types that can be used in tables? Give a real-world example of each type.
@@ -91,11 +91,11 @@ CREATE TABLE dinner (
 
 - The guests will need a place to sit at the reception, so write a command that adds a column for table number.
 
-	ALTER TABLE dinner ADD COLUMN table-number int;
+	ALTER TABLE dinner ADD COLUMN tableNumber int;
 
 - The wedding is over and we do not need to keep this information, so write a command that deletes the table numbers from the database.
 
-	ALTER TABLE dinner DROP COLUMN table-number;
+	ALTER TABLE dinner DROP COLUMN tableNumber;
 
 5. Write a command to create a new table to hold the books in a library with the columns ISBN, title, author, genre, publishing date, number of copies, and available copies.
 
@@ -123,7 +123,7 @@ CREATE TABLE books (
 
 	VALUES
 
-	(0440351626, ’The Magus', ‘John Fowles’, ‘Fiction’, ’1985-04-01’, 10, 4),
+	(0440351626, 'The Magus', 'John Fowles', 'Fiction', '1985-04-01', 10, 4),
 
 	(0345315588, 'Children of Time', 'Arthur C. Clarke’, ’SF’, ’1983-10-08', 14, 7),
 
@@ -197,7 +197,7 @@ CREATE TABLE inbox(
 
 	emailBody text ,
 
-	timeStamp datetime ,
+	timeStamp date ,
 
 	read boolean,
 
@@ -211,11 +211,11 @@ CREATE TABLE inbox(
 
 	VALUES
 
-	(1, ‘Laylah vet’, 'Mary@mmm.com', ‘doly@mmm.com', 'Don’t forget to bring Laylah on Monday’, '2019-07-22 10:22:11’, true, 1000),
+	(1, ‘Laylah vet’, 'Mary@mmm.com', ‘doly@mmm.com', 'Don'’t forget to bring Laylah on Monday’, '2019-07-22 10:22:11’, true, 1000),
 
 	(2, ‘bank’, ‘hector@bank.com’, NULL, ‘new payment’, '2019-06-15 10:05:11', true, 2000),
 
-	(3, ‘concert tickets’, ‘ulrich@lll.com’, NULL, 'Don't forget next weekend’, '2019-05-07 10:31:13’, true, 3000);
+	(3, ‘concert tickets’, ‘ulrich@lll.com’, NULL, 'Don''t forget next weekend’, '2019-05-07 10:31:13’, true, 3000);
 
 
 - You deleted one of the emails, so write a command to remove the row from the inbox table.
